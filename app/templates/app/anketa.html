@@ -1,0 +1,51 @@
+{% extends "app/layout.html" %}
+{% block content %}
+{% if form != None %}
+
+<div id="basic">
+    <br><h2>Отправте пожалуйста заполненую анкету </h2><br/>
+    <div >
+        <form method="post">
+        {% csrf_token %}
+        <label for="{{ form.name.id_for_label }} ">{{ form.name.label }}:</label>
+        {{ form.name }}<br><br/>
+        <label for="{{ form.gender.id_for_label }} ">{{ form.gender.label }}:</label>
+        {{ form.gender }}
+        <label for="{{ form.notic.id_for_label }} ">{{ form.notic.label }}:</label>
+        {{ form.notic }}<br><br/>
+        <label for="{{ form.email.id_for_label }} ">{{ form.email.label }}:</label>
+        {{ form.email }}<br><br/>
+        <label for="{{ form.mark.id_for_label }} ">{{ form.mark.label }}:</label>
+        {{ form.mark }}<br><br/>
+        <label for="{{ form.message.id_for_label }} ">{{ from.message.label }}:</label>
+        {{ form.message }}<br><br/>
+        <input type="submit" id="button" value="Отправить" >
+     
+        </form>
+    </div>
+  
+</div>
+{% else %}
+<div id="basic">
+    <br><h2>Благодарим вас за предоставленную информацию!</h2>
+    <h3>Ваш отзыв:</h3>
+    <ul>
+        <li><span>Имя:</span>{{ data.name }}</li>
+        <li><span>Пол:</span>{{ data.gender }}</li>
+        <li><span>Почта:</span>{{ data.email }}</li>
+        <li><span>Ваша оценка:</span>{{ data.mark }}</li>
+        <li><span>Получать новости сайта на почту:</span>{{ data.notic }}</li>
+        <li><span>Отзыв:</span>{{ data.message }}</li>
+    </ul>
+</div >
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+
+    {% load staticfiles %}
+<script src="{% static 'app/scripts/button.js' %}"></script>
+
+{% endblock %}
+

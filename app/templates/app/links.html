@@ -1,0 +1,26 @@
+﻿{% extends "app/layout.html" %}
+{% load static %}
+
+{% block content %}
+    <div id="basic">
+
+        <div id="head-site">
+            <a href="#"><img src="{% static 'app/content/logo.png' %}" alt="Кофейня" title="Кофейня" /></a>
+        </div>
+
+        <div id="menu-top">
+            <div >
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Illy" target="_blank"> <img src="{% static 'app/content/wiki.png' %}" /></a></li>
+                    <li><a href="https://coffeefan.info/napitki-na-osnove-kofe" target="_blank"> <img src="{% static 'app/content/link2.png' %}" /></a></li>
+                    <li><a href="https://kofemashina-dlya-doma.ru/" target="_blank"> <img src="{% static 'app/content/link3.png' %}" /></a></li>
+ 
+                </ul>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+{% endblock %}
