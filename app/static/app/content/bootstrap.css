@@ -531,11 +531,13 @@ h4,
 
 h5,
 .h5 {
+    color: mediumpurple;
   font-size: 14px;
 }
 
 h6,
 .h6 {
+    color: cornflowerblue;
   font-size: 12px;
 }
 

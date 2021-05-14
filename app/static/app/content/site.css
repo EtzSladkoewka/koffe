@@ -77,3 +77,11 @@ a {
     a:hover {
         text-decoration: none;
     }
+
+h5 {
+    color:mediumpurple;
+}
+
+h7 {
+    color: green;
+}

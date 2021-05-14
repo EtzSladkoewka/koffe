@@ -3,7 +3,7 @@
 {% if form != None %}
 
 <div id="basic">
-    <br><h2>Отправте пожалуйста заполненую анкету </h2><br/>
+    <br><h2>Отправте пожалуйста отзыв о нашем сайте </h2><br/>
     <div >
         <form method="post">
         {% csrf_token %}
@@ -11,8 +11,8 @@
         {{ form.name }}<br><br/>
         <label for="{{ form.gender.id_for_label }} ">{{ form.gender.label }}:</label>
         {{ form.gender }}
-        <label for="{{ form.notic.id_for_label }} ">{{ form.notic.label }}:</label>
-        {{ form.notic }}<br><br/>
+        <label for="{{ form.notice.id_for_label }} ">{{ form.notice.label }}:</label>
+        {{ form.notice }}<br><br/>
         <label for="{{ form.email.id_for_label }} ">{{ form.email.label }}:</label>
         {{ form.email }}<br><br/>
         <label for="{{ form.mark.id_for_label }} ">{{ form.mark.label }}:</label>
@@ -34,7 +34,7 @@
         <li><span>Пол:</span>{{ data.gender }}</li>
         <li><span>Почта:</span>{{ data.email }}</li>
         <li><span>Ваша оценка:</span>{{ data.mark }}</li>
-        <li><span>Получать новости сайта на почту:</span>{{ data.notic }}</li>
+        <li><span>Получать новости сайта на почту:</span>{{ data.notice }}</li>
         <li><span>Отзыв:</span>{{ data.message }}</li>
     </ul>
 </div >

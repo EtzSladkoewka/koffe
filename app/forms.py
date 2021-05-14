@@ -24,7 +24,7 @@ class BootstrapAuthenticationForm(AuthenticationForm):
 class Anketa(forms.Form):
     name = forms.CharField(label='Ваше имя', min_length=2 , max_length=100)
     gender = forms.ChoiceField(label='Ваш пол', choices=[('1', 'Мужской'),(2, 'Женский')], widget=forms.RadioSelect, initial=1)
-    notic = forms.BooleanField(label='Хотите получать новости с сайта на почту?', required=False)
+    notice = forms.BooleanField(label='Хотите получать новости с сайта на почту?', required=False)
     email = forms.EmailField(label='Ваш e-mail', min_length=7)
     mark = forms.ChoiceField(label='Ваша оценка заведению', choices=[('1', 'Отлично'),(2, 'Хорошо'),(3, 'Нормально'),(4, 'Оставляет желать лучшего'),(5, 'Ужасно')], initial=1)
     message = forms.CharField(label='Ваш отзыв', widget=forms.Textarea(attrs={'rows':12,'cols':20}))
